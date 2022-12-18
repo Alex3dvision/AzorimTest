@@ -418,7 +418,7 @@ function showAfkOverlay() {
     afk.countdown = afk.closeTimeout;
     updateAfkOverlayText();
 
-    if (inputOptions.controlScheme == ControlSchemeType.LockedMouse) {
+    if (inputOptions.controlScheme == ControlSchemeType.HoveringMouse) {
         document.exitPointerLock();
     }
 
