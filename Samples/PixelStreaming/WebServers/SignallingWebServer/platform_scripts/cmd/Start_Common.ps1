@@ -1,7 +1,7 @@
-# Copyright 1998-2021 Epic Games, Inc. All Rights Reserved.
+# Copyright Epic Games, Inc. All Rights Reserved.
 
 # Do setup as a common task, it is smart and will not reinstall if not required.
-. "$PSScriptRoot\setup.ps1"
+Start-Process -FilePath "$PSScriptRoot\setup.bat" -Wait -NoNewWindow
 
 $global:ScriptName = $MyInvocation.MyCommand.Name
 $global:PublicIP = $null
@@ -40,9 +40,11 @@ function print_parameters {
 
 function set_start_default_values($SetTurnServerVar, $SetStunServerVar) {
  # publicip and cirruscmd are always needed
- $global:publicip = Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing
- if ($global:PublicIP -ne $null -Or $global:PublicIP.length -eq 0) {
+ $global:PublicIP = Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing
+ if ($global:PublicIP -eq $null -Or $global:PublicIP.length -eq 0) {
   $global:PublicIP = "127.0.0.1"
+ } else {
+    $global:PublicIP = ($global:PublicIP).Content
  }
  $global:cirruscmd = ""
 

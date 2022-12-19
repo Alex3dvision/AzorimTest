@@ -1,22 +1,25 @@
-:: Copyright Epic Games, Inc. All Rights Reserved.
-@echo off
-if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
+@Rem Copyright Epic Games, Inc. All Rights Reserved.
 
+@echo off
+
+@Rem Set script directory as working directory.
 pushd "%~dp0"
 
 title Cirrus
 
+@Rem Run setup to ensure we have node and cirrus installed.
+call setup.bat
+
+@Rem Move to cirrus directory.
 pushd ..\..
 
-::Install required deps
-call powershell -command "%~dp0\setup.ps1"
+@Rem Run node server and pass any argument along.
+platform_scripts\cmd\node\node.exe cirrus %*
 
-::Run node server
-::If running with frontend web server and accessing outside of localhost pass in --publicIp=<ip_of_machine>
-node cirrus %*
-
+@Rem Pop cirrus directory.
 popd
 
+@Rem Pop script directory.
 popd
 
 pause

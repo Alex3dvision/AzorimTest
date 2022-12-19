@@ -1,7 +1,11 @@
 #!/bin/bash
 # Copyright Epic Games, Inc. All Rights Reserved.
+BASH_LOCATION=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-source Start_Common.sh
+pushd "${BASH_LOCATION}" > /dev/null
+
+source turn_user_pwd.sh
+source common_utils.sh
 
 set_start_default_values "y" "n" # TURN server defaults only
 use_args "$@"
@@ -12,15 +16,14 @@ localip=$(hostname -I | awk '{print $1}')
 echo "Private IP: $localip"
 
 turnport="${turnserver##*:}"
+if [ -z "${turnport}" ]; then
+	turnport=3478
+fi
 echo "TURN port: ${turnport}"
 echo ""
 
-pushd "$( dirname "${BASH_SOURCE[0]}" )"
-bash Install_CoTurn.sh
 
 # Hmm, plain text
-turnusername="PixelStreamingUser"
-turnpassword="AnotherTURNintheroad"
 realm="PixelStreaming"
 process="turnserver"
 arguments="-p ${turnport} -r $realm -X $publicip -E $localip -L $localip --no-cli --no-tls --no-dtls --pidfile /var/run/turnserver.pid -f -a -v -n -u ${turnusername}:${turnpassword}"
@@ -28,10 +31,10 @@ arguments="-p ${turnport} -r $realm -X $publicip -E $localip -L $localip --no-cl
 # Add arguments passed to script to arguments for executable
 arguments+=" ${cirruscmd}"
 
-pushd ../..
+pushd ../.. >/dev/null
 echo "Running: $process $arguments"
 # pause
-sudo $process $arguments &
-popd
+start_process $process $arguments &
+popd >/dev/null # ../..
 
-popd
+popd >/dev/null # BASH_SOURCE
