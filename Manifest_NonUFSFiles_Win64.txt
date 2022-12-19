@@ -1,4 +1,4 @@
-Azorim_Elite/Binaries/Win64/Azorim_Elite-Win64-Shipping.exe	2022-12-14T10:41:38.000Z
+Azorim_Elite/Binaries/Win64/Azorim_Elite.exe	2022-12-19T14:29:02.000Z
 Azorim_Elite/Binaries/Win64/AXYZ.GPU.dll	2022-05-30T11:27:00.000Z
 Azorim_Elite/Binaries/Win64/AXYZ.Draco.Decoder.dll	2022-05-30T11:26:58.000Z
 Azorim_Elite/Binaries/Win64/AXYZ.VPX.Decoder.dll	2022-05-30T11:27:02.000Z
@@ -72,29 +72,30 @@ Samples/PixelStreaming/WebServers/Matchmaker/modules/config.js	2021-08-15T08:40:
 Samples/PixelStreaming/WebServers/Matchmaker/modules/logging.js	2021-08-15T08:40:32.108Z
 Engine/Binaries/ThirdParty/Oculus/OVRPlugin/OVRPlugin/Win64/OVRPlugin.dll	2021-08-15T08:27:51.953Z
 Engine/Binaries/ThirdParty/DbgHelp/dbghelp.dll	2021-08-15T08:27:43.210Z
-Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlast_x64.dll	2021-08-15T08:35:14.952Z
-Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlastGlobals_x64.dll	2021-08-15T08:35:15.139Z
-Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlastExtAuthoring_x64.dll	2021-08-15T08:35:14.954Z
+Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlastPROFILE_x64.dll	2021-08-15T08:35:15.140Z
+Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlastGlobalsPROFILE_x64.dll	2021-08-15T08:35:15.140Z
+Engine/Plugins/Experimental/BlastPlugin/Binaries/Win64/NvBlastExtAuthoringPROFILE_x64.dll	2021-08-15T08:35:15.139Z
 Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll	2021-08-15T08:27:50.968Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PxFoundation_x64.dll	2021-08-15T08:28:04.594Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PxPvdSDK_x64.dll	2021-08-15T08:28:04.731Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3_x64.dll	2021-08-15T08:28:02.817Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3Cooking_x64.dll	2021-08-15T08:28:03.948Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3Common_x64.dll	2021-08-15T08:28:03.278Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/APEX_Clothing_x64.dll	2021-08-15T08:27:59.636Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/APEX_Legacy_x64.dll	2021-08-15T08:28:01.305Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/ApexFramework_x64.dll	2021-08-15T08:28:02.110Z
-Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/NvCloth_x64.dll	2021-08-15T08:28:02.567Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PxFoundationPROFILE_x64.dll	2021-08-15T08:28:04.597Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PxPvdSDKPROFILE_x64.dll	2021-08-15T08:28:04.736Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3PROFILE_x64.dll	2021-08-15T08:28:04.046Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3CookingPROFILE_x64.dll	2021-08-15T08:28:03.953Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PhysX3CommonPROFILE_x64.dll	2021-08-15T08:28:03.513Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/APEX_ClothingPROFILE_x64.dll	2021-08-15T08:27:59.939Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/APEX_LegacyPROFILE_x64.dll	2021-08-15T08:28:01.580Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/ApexFrameworkPROFILE_x64.dll	2021-08-15T08:28:02.293Z
+Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/NvClothPROFILE_x64.dll	2021-08-15T08:28:02.683Z
 Engine/Binaries/ThirdParty/Ogg/Win64/VS2015/libogg_64.dll	2021-08-15T08:27:51.956Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll	2021-08-15T08:28:12.672Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll	2021-08-15T08:28:12.672Z
 Engine/Binaries/ThirdParty/OpenXR/win64/openxr_loader.dll	2021-08-15T08:27:52.080Z
 Engine/Binaries/ThirdParty/OpenVR/OpenVRv1_5_17/Win64/openvr_api.dll	2021-08-15T08:27:52.074Z
 Engine/Binaries/ThirdParty/NVIDIA/GeForceNOW/Win64/GfnRuntimeSdk.dll	2021-08-15T08:27:50.963Z
+Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64/WinPixEventRuntime.dll	2021-08-15T08:28:13.047Z
 Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll	2021-08-15T08:28:14.297Z
 Azorim_Elite/Content/Movies/commercial-offline.mp4	2022-12-13T09:10:52.000Z
 Azorim_Elite/Content/Movies/EXCHANGE7_OFFICE 4.mp4	2022-12-13T09:10:52.000Z
 Azorim_Elite/Content/Movies/EXCHANGE7_RESIDENTIAL 4.mp4	2022-12-13T09:10:52.000Z
 Azorim_Elite/Content/Movies/EXCHANGE-UNREAL-HOMESCREEN.mp4	2022-12-13T09:10:52.000Z
 Azorim_Elite/Content/Movies/Xchange_60sec_CC_MP4 50.mp4	2022-12-13T09:10:52.000Z
-Azorim_Elite.exe	2022-12-19T08:55:16.000Z
+Azorim_Elite.exe	2022-12-19T14:31:10.000Z
