@@ -4,8 +4,7 @@
 	"UseHTTPS": false,
 	"UseAuthentication": false,
 	"LogToFile": true,
-	"LogVerbose": true,
-	"HomepageFile": "/Public/player.html",
+	"HomepageFile": "/www/player.html",
 	"AdditionalRoutes": {},
 	"EnableWebserver": true,
 	"MatchmakerAddress": "",
@@ -13,6 +12,5 @@
 	"PublicIp": "localhost",
 	"HttpPort": 80,
 	"HttpsPort": 443,
-	"StreamerPort": 8888,
-	"SFUPort": 8889
+	"StreamerPort": 8888
 }

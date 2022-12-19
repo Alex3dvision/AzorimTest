@@ -1,4 +1,4 @@
-# Copyright Epic Games, Inc. All Rights Reserved.
+# Copyright 1998-2021 Epic Games, Inc. All Rights Reserved.
 
 . "$PSScriptRoot\Start_Common.ps1"
 
@@ -8,12 +8,12 @@ print_parameters
 
 Push-Location $PSScriptRoot
 
-Start-Process -FilePath "PowerShell" -ArgumentList ".\Start_TURNServer.ps1" -WorkingDirectory "$PSScriptRoot"
+Start-Process -FilePath "PowerShell" -ArgumentList ".\Start_TURNServer.ps1 --turn $global:TurnServer" -WorkingDirectory "$PSScriptRoot"
 
 $peerConnectionOptions = "{ \""iceServers\"": [{\""urls\"": [\""stun:" + $global:StunServer + "\"",\""turn:" + $global:TurnServer + "\""], \""username\"": \""PixelStreamingUser\"", \""credential\"": \""AnotherTURNintheroad\""}] }"
 
-$ProcessExe = "platform_scripts\cmd\node\node.exe"
-$Arguments = @("cirrus", "--peerConnectionOptions=""$peerConnectionOptions""", "--PublicIp=$global:PublicIp")
+$ProcessExe = "node.exe"
+$Arguments = @("cirrus", "--peerConnectionOptions=""$peerConnectionOptions""", "--publicIp=$global:PublicIp")
 # Add arguments passed to script to Arguments for executable
 $Arguments += $args
 
